@@ -5,6 +5,22 @@ import java.util.Arrays;
 public class Comparator {
 
     public static void comparator(int[] arr) {
+        /**
+         * 双基准快速排序
+         * 比经典快排多一个基准数，将数组分为三段
+         * Partitioning:
+         *
+         *   left part           center part                   right part
+         * +--------------------------------------------------------------+
+         * |  < pivot1  |  pivot1 <= && <= pivot2  |    ?    |  > pivot2  |
+         * +--------------------------------------------------------------+
+         *               ^                          ^       ^
+         *               |                          |       |
+         *              less                        k     great
+         *
+         * 数组长度小于47用插入排序
+         * 大于286用归并排序或双基准快排
+         */
         Arrays.sort(arr);
     }
 
