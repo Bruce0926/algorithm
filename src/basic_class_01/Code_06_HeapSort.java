@@ -13,17 +13,26 @@ public class Code_06_HeapSort extends Comparator {
         if (arr == null || arr.length < 2) {
             return;
         }
+        /**
+         * 时间复杂度log1+log2+...+logN-1就是O(N)
+         */
         for (int i = 0; i < arr.length; i++) {
             heapInsert(arr, i);
         }
-//        int size = arr.length;
-//        swap(arr, 0, --size);
-//        while (size > 0) {
-//            heapify(arr, 0, size);
-//            swap(arr, 0, --size);
-//        }
+        int size = arr.length;
+        swap(arr, 0, --size);
+        while (size > 0) {
+            heapify(arr, 0, size);
+            swap(arr, 0, --size);
+        }
     }
 
+    /**
+     * 这个建立大根堆的过程
+     * 时间复杂度O(logN)
+     * @param arr
+     * @param index
+     */
     public static void heapInsert(int[] arr, int index) {
         while (arr[index] > arr[(index - 1) / 2]) {
             swap(arr, index, (index - 1) / 2);
@@ -49,7 +58,8 @@ public class Code_06_HeapSort extends Comparator {
 
     // for test
     public static void main(String[] args) {
-        int testTime = 500000;
+        long currentTimeMillis = System.currentTimeMillis();
+        int testTime = 1000000;
         int maxSize = 100;
         int maxValue = 100;
         boolean succeed = true;
@@ -69,6 +79,7 @@ public class Code_06_HeapSort extends Comparator {
         printArray(arr);
         heapSort(arr);
         printArray(arr);
+        System.out.println(System.currentTimeMillis()-currentTimeMillis);
     }
 
 }
