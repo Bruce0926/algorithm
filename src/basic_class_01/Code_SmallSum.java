@@ -86,7 +86,7 @@ public class Code_SmallSum  extends Comparator {
         int[] arr1 = generateRandomArray(maxSize, maxValue);
 //        arr1 = new int[]{95,61,36,4,56};
         printArray(arr1);
-        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        System.out.println(succeed ? "Nice!" : "ERROR!");
         System.out.println(comparator1(arr1));
         System.out.println(smallSum(arr1));
     }

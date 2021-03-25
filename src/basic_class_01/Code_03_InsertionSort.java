@@ -40,7 +40,7 @@ public class Code_03_InsertionSort extends Comparator {
                 break;
             }
         }
-        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        System.out.println(succeed ? "Nice!" : "ERROR!");
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);

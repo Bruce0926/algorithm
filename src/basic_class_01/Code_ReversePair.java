@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * 逆序对
- * 数组的左边比右边大则构成一个逆序对，即i<j,而a[i]>a[j]，打印数组中所有的逆序对
+ * 数组的左边元素比右边大则构成一个逆序对，即i<j,而a[i]>a[j]，打印数组中所有的逆序对
  * 两种方法：
  * 方法一：双循环，时间复杂度：O(N^2)
  * 方法二：类似归并排序，因为归并也是按照从左到右的顺序的，在归并的过程中计算左边比右边大的元素对，时间复杂度O(N*logN)
@@ -108,7 +108,7 @@ public class Code_ReversePair extends Comparator {
         arr1 = new int[]{23,82,56,6,40,4};
         arr1 = new int[]{23,13,41,15,42,16,98,78};
         printArray(arr1);
-        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        System.out.println(succeed ? "Nice!" : "ERROR!");
         System.out.println(comparator1(arr1));
         System.out.println(reversePair(arr1));
         System.out.println(reversePair(arr1).equals(comparator1(arr1)));

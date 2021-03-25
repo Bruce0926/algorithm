@@ -44,7 +44,7 @@ public class Code_02_SelectionSort extends Comparator {
                 break;
             }
         }
-        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        System.out.println(succeed ? "Nice!" : "ERROR!");
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);

@@ -5,7 +5,7 @@ import utils.Comparator;
 import java.util.Arrays;
 
 /**
- * 给定一个数组，求如果排序之后，相邻两数的最大差值，要求时间复杂度O(N)，且要求不能用非基于比较的排序。
+ * 给定一个数组，排序之后，求相邻两数的最大差值，要求时间复杂度O(N)
  */
 public class Code_MaxGap extends Comparator{
 
@@ -45,6 +45,10 @@ public class Code_MaxGap extends Comparator{
         return res;
     }
 
+    /**
+     * 定位该数在桶中的索引位置
+     * @return
+     */
     public static int bucket(long num, long len, long min, long max) {
         return (int) ((num - min) * len / (max - min));
     }
@@ -76,7 +80,7 @@ public class Code_MaxGap extends Comparator{
                 break;
             }
         }
-        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        System.out.println(succeed ? "Nice!" : "ERROR!");
     }
 
 }

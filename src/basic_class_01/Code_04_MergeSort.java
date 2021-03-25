@@ -73,7 +73,7 @@ public class Code_04_MergeSort extends Comparator {
                 break;
             }
         }
-        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        System.out.println(succeed ? "Nice!" : "ERROR!");
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);
