@@ -79,7 +79,7 @@ public class Code_06_HeapSort extends Comparator {
         printArray(arr);
         heapSort(arr);
         printArray(arr);
-        System.out.println(System.currentTimeMillis()-currentTimeMillis);
+//        System.out.println(System.currentTimeMillis()-currentTimeMillis);
     }
 
 }
