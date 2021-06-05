@@ -60,12 +60,15 @@ public class ReverseLink {
     public static void main(String[] args) {
         ListNode head = new ListNode(-1);
         ListNode first = head;
-        for (int i = 1; i < 6; i++) {
+        for (int i = 1; i < 9; i++) {
             ListNode newNode = new ListNode(i);
             head.next = newNode;
             head = head.next;
         }
-        ListNode listNode = reverseBetween(first, 2, 4);
-        System.out.println();
+        ListNode listNode = reverseBetween(first, 3, 6);
+        while(listNode.next != null){
+            listNode = listNode.next;
+            System.out.print(listNode.val+"\t");
+        }
     }
 }
