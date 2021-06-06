@@ -28,7 +28,7 @@ import java.util.Set;
  * -------------------------------
  * 最终岛屿数量是2
  */
-public class Code_0_1 {
+public class IslandAndOcean {
     public static int islandAndOcean(int[][] A,int[][] B){
         //将海洋变成岛屿
         for (int i = 0; i < B.length; i++) {
